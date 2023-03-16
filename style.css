@@ -1,0 +1,68 @@
+body{
+    background-color: black;
+    color: aliceblue;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.txt{
+    text-align: center;
+}
+
+form{
+    margin-top: 5%;
+    border: 2px aliceblue dotted;
+    padding: 10px;
+}
+#output1{
+    text-align: center;
+    background-color: aliceblue;
+    color: black;
+    width: 50%;
+    padding: 10px;
+    margin-top: 5%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.alpha{
+    text-align: center;
+    background-color: aliceblue;
+    color: black;
+    width: 50%;
+    padding: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+@media(max-width:750px){
+    #output1{
+        width: 90%;
+        font-size: 20px;
+    }
+    .alpha{
+        width: 90%;
+    }
+    .alpha h2{
+        font-size: 20px;
+    }
+}
+@media(max-width:450px){
+    #output1{
+        width: 95%;
+        font-size: 18px;
+    }
+    .alpha{
+        width: 95%;
+    }
+    .alpha h2{
+        font-size: 18px;
+    }
+    .txt h3{
+        font-size: 16px;
+    }
+    .txt h1{
+        font-size: 20px;
+    }
+}
+
+@media(max-width:405px){
+    form input{
+        margin-bottom: 10px;
+    }
+}

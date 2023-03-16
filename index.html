@@ -1,0 +1,66 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <title>Vectors</title>
+</head>
+<body>
+    <div class="txt">
+        <h2>Let's add two vectors</h1>
+        <h3><em>Give some values to </em><strong style="color: red;">P vector, Q vector and &#952;</strong></h3>
+        <h1>R<sup>2</sup>=P<sup>2</sup>+Q<sup>2</sup>+2PQ COS&#952;</h1>
+        <h1>tan &alpha; = Q sin&theta; / P + Q cos&theta; </h1>
+    </div>
+
+    <center><form name="formn" action="javascript:validate();">
+        P: <input type="text" name="pvec" id="" required size="5">
+        Q: <input type="text" name="qvec" id="" required size="5">
+        &#952; : <input type="text" name="thita" id="" required size="5">        
+        <input type="submit" name="" id="" value="calculate">
+    </form></center>
+
+    <center><h2 id="output1">R = ___________</h2></center>
+    <center><div class="alpha">
+        <h2 id="output3">&alpha; = ___________</h2>
+        <h2 id="output2">&alpha; = ___________</h2>
+    </div></center>
+
+    <script type="text/javascript">
+        var p, q, thita;
+        var output1, output2;
+
+        function validate(){
+            p = document.forms["formn"]["pvec"].value;
+            q = document.forms["formn"]["qvec"].value;
+            thita = document.forms["formn"]["thita"].value;
+
+            powerP = Math.pow(p,2);
+            powerQ = Math.pow(q,2);
+            angleR = thita*(Math.PI/180);
+            cosT  = Math.cos(angleR);
+            sinT = Math.sin(angleR);
+
+            r = powerP + powerQ + 2 * p * q * cosT;
+            sqR = Math.sqrt(r);
+            output1 = "<em>R = <u>"+sqR+"N</u></em>";
+            document.getElementById("output1").innerHTML = output1;
+            console.log(sinT);
+
+            p = document.forms["formn"]["pvec"].value;
+            q = document.forms["formn"]["qvec"].value;
+
+            first = q*sinT;
+            sec = q*cosT+Number(p);
+            angle = first/sec;
+            angletan = Math.atan(angle);
+            output3 = "<em>&alpha; = tan<sup>-1</sup>("+angle+")</em>";
+            output2 = "<em>&alpha; = <u>"+angletan+" rad</u></em>";
+            document.getElementById("output2").innerHTML = output2;
+            document.getElementById("output3").innerHTML = output3;
+        }
+
+    </script>
+</body>
+</html>
